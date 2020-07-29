@@ -1,0 +1,51 @@
+<template>
+  <dv-border-box-8>
+    <dv-charts :option="dvChartsOption" style="width:100%;height:100%"/>
+  </dv-border-box-8>
+</template>
+
+<script>
+export default {
+  name: 'left_1',
+  props: {
+    msg: String
+  },
+  data:function(){
+    return {
+      //图表
+      dvChartsOption:{
+        title: {
+          text: '系统负荷率',
+          style: {
+            fill: '#fff'
+          }
+        },
+        series: [
+          {
+            type: 'gauge',
+            data: [ { name: 'itemA', value: 55 } ],
+            center: ['50%', '55%'],
+            axisLabel: {
+              formatter: '{value}%',
+              style: {
+                fill: '#fff'
+              }
+            },
+            axisTick: {
+              style: {
+                stroke: '#fff'
+              }
+            },
+            animationCurve: 'easeInOutBack'
+          }
+        ]
+      }
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
