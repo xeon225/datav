@@ -2,7 +2,8 @@
   <div class="left_box">
     <div>
       <dv-border-box-8>
-        <dv-charts :option="dvChartsOption" style="width:100%;height:100%"/>
+        <div class="dvTitle flex-container bottom center">{{msg}}</div>
+        <dv-charts :option="dvChartsOption" style="width:100%;height:80%"/>
       </dv-border-box-8>
     </div>    
   </div>
@@ -18,12 +19,7 @@ export default {
     return {
       //图表
       dvChartsOption:{
-        title: {
-          text: '系统负荷率',
-          style: {
-            fill: '#fff'
-          }
-        },
+        
         series: [
           {
             type: 'gauge',
