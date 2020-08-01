@@ -1,10 +1,8 @@
 <template>
   <div class="left_box">
     <div>
-      <dv-border-box-8>
         <div class="dvTitle flex-container bottom center">{{msg}}</div>
         <dv-active-ring-chart :config="dataDvActive" style="width:100%;height:80%"/>
-      </dv-border-box-8>
     </div>    
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <div class="right_box">
     <div>
-      <dv-border-box-8>
+      <dv-border-box-12>
         <dv-scroll-board :config="dvCapsuleOption" style="width:100%;height:100%"/>
-      </dv-border-box-8>
+      </dv-border-box-12>
     </div>    
   </div>
 </template>

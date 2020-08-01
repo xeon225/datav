@@ -1,12 +1,12 @@
 <template>
   <div class="right_box">
     <div>
-      <dv-border-box-8>
+      <dv-border-box-12>
         <div class="dvTitle flex-container center">{{msg}}</div>
         <div class="flex-container center top" style="height:70%">
           <dv-capsule-chart :config="dvCapsuleOption" style="width:80%;height:100%"/>
         </div>
-      </dv-border-box-8>
+      </dv-border-box-12>
     </div>    
   </div>
 </template>
