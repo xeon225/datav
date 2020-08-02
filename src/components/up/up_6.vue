@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'left_1',
+  name: 'up_6',
   props: {
     msg: String
   },
