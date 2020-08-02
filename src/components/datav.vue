@@ -3,9 +3,18 @@
   <dv-full-screen-container class="padding5">
     <!-- <dv-loading>Loading...</dv-loading> -->
     <div class="dataTitle text-center text-white flex-container">
-      <dv-decoration-8 style="width:300px;height:50px;" />
-      <dv-decoration-5 style="width:900px;height:50px;"/><!-- 天狗大屏数据展示 --></div>
-      <dv-decoration-8 :reverse="true" style="width:300px;height:50px;" />
+      <div class="pos-r">
+        <dv-decoration-8 style="width:300px;height:50px;" />
+        <dv-decoration-1 class="pos-a" style="width:200px;height:50px;top:0" />
+      </div>
+      <div class="pos-r">
+        <div class="text-white pos-a text-center" style="left:0;right:0">天狗大屏数据展示</div>
+        <dv-decoration-5 class="margint10" style="width:900px;height:50px;"/>
+      </div>
+      <div class="pos-r">
+        <dv-decoration-8 :reverse="true" style="width:300px;height:50px;" />
+        <dv-decoration-3 class="pos-a" style="width:250px;height:30px; top:10px; right:0;" />
+      </div>
     </div>
     <div class="clearfix" style="height:calc(100% - 100px);width:100%;">
       <div class="dataLeft">
