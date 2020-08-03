@@ -1,6 +1,5 @@
 <template>
-<div>
-  <dv-full-screen-container class="padding5">
+  <dv-full-screen-container>
     <!-- <dv-loading>Loading...</dv-loading> -->
     <div class="dataTitle text-center text-white flex-container">
       <div class="pos-r">
@@ -46,7 +45,6 @@
     </div>
       
   </dv-full-screen-container>
-</div>
   
 </template>
 
@@ -95,16 +93,18 @@ export default {
 .dataTitle{
   height:100px;
   font-size:30px;
+  padding:0 10px;
 }
 .dataLeft{
-  width:300px;
+  width:290px;
   height:calc(100% - 10px);
   float:left;
+  margin-left:10px;
 }
 .dataRight{
-  width:calc(100% - 305px);
+  width:calc(100% - 315px);
   height:calc(100% - 10px);
-  float:right;
+  float:left;
   margin-left:5px;
 }
 .dataRightUp{

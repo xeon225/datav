@@ -10,7 +10,11 @@
   "dependencies": {
     "@jiaminghi/data-view": "^2.9.4",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "sass-loader": "^9.0.2",
+    "swiper": "^6.1.1",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-fullpage.js": "^0.1.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
