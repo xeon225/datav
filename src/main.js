@@ -4,6 +4,7 @@ import App from './App.vue'
 import dataV from '@jiaminghi/data-view'
 Vue.use(dataV)
 
+import 'fullpage.js/dist/fullpage.min.css';
 import 'fullpage.js/vendors/scrolloverflow';
 import VueFullPage from 'vue-fullpage.js';
 Vue.use(VueFullPage);

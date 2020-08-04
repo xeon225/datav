@@ -18,14 +18,14 @@
           <h3 class="text-white">Slide 2.1</h3>
         </div>
         <div class="slide">
-          <h3>Slide 2.2</h3>
+          <h3 class="text-white">Slide 2.2</h3>
         </div>
         <div class="slide">
-          <h3>Slide 2.3</h3>
+          <h3 class="text-white">Slide 2.3</h3>
         </div>
       </div>
       <div class="section">
-        <h3>Section 3</h3>
+        <h3 class="text-red">Section 3</h3>
       </div>
     </full-page>
     
@@ -43,10 +43,13 @@ export default {
   data(){
     return {
       options: {
+        controlArrows:false,
+        loopHorizontal:true,
         scrollingSpeed:1000,
         keyboardScrolling: true,
-        continuousVertical: true,
+        continuousVertical: false,
         afterLoad: this.afterLoad,
+        slideSelector: ".slide"
         // beforeChange: function (prev, next) {
         // },
         // afterChange: function (prev, next) {
@@ -62,29 +65,45 @@ export default {
         //开启循环模式
         loop: true
       },
-      timer:''
+      timer:'',
+      timerSlide:'',
+      tData:3000,  //大屏数据时间
+      tSlide:6000, //图片轮播时间
+      tVideo:3000  //视频显示时间
     }
   },
   methods:{
-    moveDown(t){
-      var time = t && 3000;
+    moveSectionInit(t){
+      var time = t || 3000;
+      console.log(time)
+      this.timer = setInterval(()=>{this.$refs.fullpage.api.moveTo(1,0);},time)
+    },
+    moveSection(t){
+      var time = t || 3000;
+      console.log(time)
       this.timer = setInterval(()=>{this.$refs.fullpage.api.moveSectionDown();},time)
     },
+    moveSlide(t){
+      var time = t || 3000;
+      this.timerSlide = setInterval(()=>{this.$refs.fullpage.api.moveSlideRight();},time)
+    },
+    
     beforeRouteLeave(){
         clearInterval(this.timer)
-        // next();
+        clearInterval(this.timerSlide)
     },
     afterLoad:function(anchors,item){
       // console.log(item)
       if (item.index === 0) {
         this.beforeRouteLeave();
-        this.moveDown(5000);
+        this.moveSection(this.tData);
       }else if (item.index === 1) {
         this.beforeRouteLeave();
-        this.moveDown(2000);
+        this.moveSlide(this.tSlide/3)
+        this.moveSection(this.tSlide);
       }else if (item.index === 2) {
         this.beforeRouteLeave();
-        this.moveDown(2000);
+        this.moveSectionInit(this.tVideo);
       }
 
     }
