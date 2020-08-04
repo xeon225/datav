@@ -9,9 +9,11 @@ import 'fullpage.js/vendors/scrolloverflow';
 import VueFullPage from 'vue-fullpage.js';
 Vue.use(VueFullPage);
 
-import vueSwiper from 'vue-awesome-swiper'
-import 'swiper/swiper-bundle.css' 
-Vue.use(vueSwiper)
+import VideoPlayer from 'vue-video-player'
+import 'vue-video-player/src/custom-theme.css'
+import 'video.js/dist/video-js.css'
+Vue.use(VideoPlayer)
+
 
 import './cmui.css'
 

@@ -14,7 +14,8 @@
     "swiper": "^6.1.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-fullpage.js": "^0.1.5"
+    "vue-fullpage.js": "^0.1.5",
+    "vue-video-player": "^5.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
